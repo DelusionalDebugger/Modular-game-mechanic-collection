@@ -23,6 +23,7 @@ offset_right = 757.0
 offset_bottom = 257.0
 
 [node name="MainText" type="Label" parent="Panel"]
+layout_mode = 0
 offset_right = 389.0
 offset_bottom = 54.0
 text = "Welcome to the modular game mechanic repo - made to store pre made mechanics to reuse or use to help program something"
