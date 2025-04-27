@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cgq1likmuq56f"]
+
+[node name="Main" type="Node"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 221.0
+offset_top = 378.0
+offset_right = 374.0
+offset_bottom = 422.0
+text = "2D sidescrollers"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 682.0
+offset_top = 374.0
+offset_right = 900.0
+offset_bottom = 421.0
+text = "Top down"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 368.0
+offset_top = 176.0
+offset_right = 757.0
+offset_bottom = 257.0
+
+[node name="MainText" type="Label" parent="Panel"]
+offset_right = 389.0
+offset_bottom = 54.0
+text = "Welcome to the modular game mechanic repo - made to store pre made mechanics to reuse or use to help program something"
+autowrap_mode = 3
