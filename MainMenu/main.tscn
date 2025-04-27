@@ -27,4 +27,5 @@ layout_mode = 0
 offset_right = 389.0
 offset_bottom = 54.0
 text = "Welcome to the modular game mechanic repo - made to store pre made mechanics to reuse or use to help program something"
+horizontal_alignment = 1
 autowrap_mode = 3
