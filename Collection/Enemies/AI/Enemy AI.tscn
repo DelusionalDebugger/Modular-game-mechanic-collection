@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://kr4l2gsilny4"]
+
+[node name="EnemyAI" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Enemies" type="Node" parent="."]
