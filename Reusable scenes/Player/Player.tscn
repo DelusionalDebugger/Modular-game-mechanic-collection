@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cravhsds4jx35"]
-
-[node name="Player" type="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
