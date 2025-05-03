@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cravhsds4jx35"]
 
-[ext_resource type="Script" path="res://Reusable scenes/Player (top down)/player (top down).gd" id="1_ejl7x"]
-[ext_resource type="Texture2D" uid="uid://druy6k1dklpo3" path="res://Assets/Player.png" id="1_m2phd"]
+[ext_resource type="Script" path="res://Reusable scenes/Player (top down)/player_(top_down).gd" id="1_qnkup"]
+[ext_resource type="Texture2D" uid="uid://druy6k1dklpo3" path="res://Assets/Player.png" id="2_pw610"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blryj"]
 size = Vector2(16, 16)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_ejl7x")
+script = ExtResource("1_qnkup")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_m2phd")
+texture = ExtResource("2_pw610")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_blryj")

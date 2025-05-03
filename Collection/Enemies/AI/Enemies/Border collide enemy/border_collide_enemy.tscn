@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjsflaqpjotqs"]
+
+[ext_resource type="PackedScene" uid="uid://2j417jyxspp4" path="res://Collection/Enemies/AI/Enemies/Base enemy/base_enemy.tscn" id="1_r4rd8"]
+[ext_resource type="Script" path="res://Collection/Enemies/AI/Enemies/Border collide enemy/border_collide_enemy.gd" id="2_rotya"]
+
+[node name="BorderCollideEnemy" instance=ExtResource("1_r4rd8")]
+script = ExtResource("2_rotya")
+
+[node name="PlayerTrackerPivot" type="Node2D" parent="." index="2"]
+
+[node name="PlayerTracker" type="RayCast2D" parent="PlayerTrackerPivot" index="0"]
+target_position = Vector2(50, 0)
+
+[node name="BoundaryChecks" type="Node2D" parent="." index="3"]
+
+[node name="LeftCheck" type="RayCast2D" parent="BoundaryChecks" index="0"]
+target_position = Vector2(-15, 0)
+
+[node name="RightCheck" type="RayCast2D" parent="BoundaryChecks" index="1"]
+target_position = Vector2(15, 0)
+
+[node name="TopCheck" type="RayCast2D" parent="BoundaryChecks" index="2"]
+target_position = Vector2(0, -15)
+
+[node name="BottomCheck" type="RayCast2D" parent="BoundaryChecks" index="3"]
+target_position = Vector2(0, 15)
