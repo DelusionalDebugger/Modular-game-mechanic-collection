@@ -7,6 +7,7 @@ var movementVelocity : int = 30
 var targetLocation : Vector2
 
 func _ready() -> void:
+	randomize()
 	targetLocation = Vector2(randi_range(-2000,2000),randi_range(-2000,2000))	#Can replace these ranges with screen or scene size needed 
 
 func _physics_process(delta: float) -> void:
