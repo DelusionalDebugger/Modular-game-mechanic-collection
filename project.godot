@@ -17,7 +17,7 @@ config/icon="res://Assets/Player.png"
 
 [global_group]
 
-player="All player scenes"
+Player="All player scenes"
 
 [input]
 
