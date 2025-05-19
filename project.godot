@@ -15,6 +15,10 @@ run/main_scene="res://Main menu/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/Player.png"
 
+[global_group]
+
+player="All player scenes"
+
 [input]
 
 Left={

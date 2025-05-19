@@ -7,5 +7,3 @@
 script = ExtResource("2_i54ky")
 
 [node name="PlayerTracker" type="RayCast2D" parent="." index="2"]
-
-[node name="PointTracker" type="RayCast2D" parent="." index="3"]
