@@ -27,6 +27,6 @@ func randomMovement(delta: float):
 
 func findPlayer(player):
 	if player == null:
-		pass
+		return
 	else:
-		playerTracker.look_at(player)
+		playerTracker.target_position = to_local(player.global_position)
