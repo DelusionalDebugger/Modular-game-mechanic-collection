@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var playerTracker: RayCast2D = $PlayerTracker
 
 var chosenLocation : Vector2
-var targetLocation : Vector2
+var chosenPath : Vector2
 var movementVelocity : int = 90
 var player = null #Player in the scene will be stored here
 
@@ -16,21 +16,29 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	randomMovement(delta)
-	findPlayer(player)
+	handlePlayer(player, delta)
 
 
 func randomMovement(delta: float):
-		targetLocation = (chosenLocation - global_position).normalized()
-		global_position += movementVelocity * delta * targetLocation
+		chosenPath = (chosenLocation - global_position).normalized() #Determines path to chosen location
+		global_position += movementVelocity * delta * chosenPath
 	
 		if global_position.distance_to(chosenLocation) < 3.0: #If distance to destination is less than 3.0
 			randomize()
 			chosenLocation = Vector2(randi_range(-2000,2000),randi_range(-2000,2000))
 
 
-func findPlayer(player):
-	if player == null:
+func handlePlayer(player:CharacterBody2D , delta:float):
+	if player == null: #Exits function if player is not present in scene e.g if dead
 		return
 	else:
-		playerTracker.look_at(player.global_position)
-		playerTracker.target_position = Vector2(100, 0)  # Set raycast length after rotation
+		playerTracker.look_at(player.global_position) #Raycast looks at player
+		playerTracker.target_position = Vector2(50, 0)  #Set raycast length after rotation
+		
+		if playerTracker.is_colliding(): #If raycast collides
+			var collisionResult = playerTracker.get_collider()
+			if collisionResult == player:
+				var trackPlayerLocation = (player.global_position - global_position).normalized() #Replace with damaging player logic
+				position += trackPlayerLocation * delta * movementVelocity
+			else:
+				return
