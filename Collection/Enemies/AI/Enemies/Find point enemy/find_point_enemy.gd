@@ -5,17 +5,19 @@ extends CharacterBody2D
 var chosenLocation : Vector2
 var targetLocation : Vector2
 var movementVelocity : int = 90
-
 var player = null #Player in the scene will be stored here
+
 
 func _ready() -> void:
 	randomize()
 	chosenLocation = Vector2(randi_range(-2000,2000),randi_range(-2000,2000))	#Can replace these ranges with screen or scene size needed 
 	player = get_tree().get_first_node_in_group("Player")
 
+
 func _physics_process(delta: float) -> void:
 	randomMovement(delta)
 	findPlayer(player)
+
 
 func randomMovement(delta: float):
 		targetLocation = (chosenLocation - global_position).normalized()
@@ -25,8 +27,10 @@ func randomMovement(delta: float):
 			randomize()
 			chosenLocation = Vector2(randi_range(-2000,2000),randi_range(-2000,2000))
 
+
 func findPlayer(player):
 	if player == null:
 		return
 	else:
-		playerTracker.target_position = to_local(player.global_position)
+		playerTracker.look_at(player.global_position)
+		playerTracker.target_position = Vector2(100, 0)  # Set raycast length after rotation
