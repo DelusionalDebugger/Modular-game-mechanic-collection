@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=4 uid="uid://kr4l2gsilny4"]
 
-[ext_resource type="Texture2D" uid="uid://dvpahn3wx4o7u" path="res://Assets/Tile 3.png" id="1_nlxi1"]
-[ext_resource type="PackedScene" uid="uid://bvfx3nnmy52x1" path="res://Collection/Enemies/AI/Enemies/Find point enemy/Find_point_enemy.tscn" id="2_54pm0"]
-[ext_resource type="PackedScene" uid="uid://cravhsds4jx35" path="res://Reusable scenes/Player (top down)/Player (top down).tscn" id="3_nbsqj"]
+[ext_resource type="Texture2D" uid="uid://dvpahn3wx4o7u" path="res://Assets/Tile 3.png" id="1_u8wo3"]
+[ext_resource type="PackedScene" uid="uid://bvfx3nnmy52x1" path="res://Collection/Enemies/AI/Enemies/Find point enemy/find_point_enemy.tscn" id="2_wl7go"]
+[ext_resource type="PackedScene" uid="uid://cravhsds4jx35" path="res://Reusable scenes/Player (top down)/player (top down).tscn" id="3_r0n6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bt7i"]
-texture = ExtResource("1_nlxi1")
+texture = ExtResource("1_u8wo3")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_inq6r"]
@@ -24,17 +24,17 @@ tile_set = SubResource("TileSet_inq6r")
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="FindPointEnemy" parent="Enemies" instance=ExtResource("2_54pm0")]
+[node name="FindPointEnemy" parent="Enemies" instance=ExtResource("2_wl7go")]
 position = Vector2(908, 241)
 
-[node name="FindPointEnemy2" parent="Enemies" instance=ExtResource("2_54pm0")]
+[node name="FindPointEnemy2" parent="Enemies" instance=ExtResource("2_wl7go")]
 position = Vector2(212, 354)
 
-[node name="FindPointEnemy3" parent="Enemies" instance=ExtResource("2_54pm0")]
+[node name="FindPointEnemy3" parent="Enemies" instance=ExtResource("2_wl7go")]
 position = Vector2(803, 534)
 
-[node name="FindPointEnemy4" parent="Enemies" instance=ExtResource("2_54pm0")]
+[node name="FindPointEnemy4" parent="Enemies" instance=ExtResource("2_wl7go")]
 position = Vector2(438, 106)
 
-[node name="Player" parent="." instance=ExtResource("3_nbsqj")]
+[node name="Player" parent="." instance=ExtResource("3_r0n6m")]
 position = Vector2(593, 315)

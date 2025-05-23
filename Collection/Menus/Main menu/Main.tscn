@@ -1,28 +1,33 @@
-[gd_scene format=3 uid="uid://cgq1likmuq56f"]
+[gd_scene load_steps=3 format=3 uid="uid://cgq1likmuq56f"]
+
+[ext_resource type="Script" path="res://Collection/Menus/Main menu/2D_sidescrollers.gd" id="1_virlm"]
+[ext_resource type="Script" path="res://Collection/Menus/Main menu/top_down.gd" id="2_vectu"]
 
 [node name="Main" type="Node"]
 
-[node name="Button" type="Button" parent="."]
+[node name="2DSidescrollers" type="Button" parent="."]
 offset_left = 221.0
 offset_top = 378.0
 offset_right = 374.0
 offset_bottom = 422.0
 text = "2D sidescrollers"
+script = ExtResource("1_virlm")
 
-[node name="Button2" type="Button" parent="."]
+[node name="TopDown" type="Button" parent="."]
 offset_left = 682.0
 offset_top = 374.0
 offset_right = 900.0
 offset_bottom = 421.0
 text = "Top down"
+script = ExtResource("2_vectu")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="TextPanel" type="Panel" parent="."]
 offset_left = 368.0
 offset_top = 176.0
 offset_right = 757.0
 offset_bottom = 257.0
 
-[node name="MainText" type="Label" parent="Panel"]
+[node name="MainText" type="Label" parent="TextPanel"]
 layout_mode = 0
 offset_right = 389.0
 offset_bottom = 54.0

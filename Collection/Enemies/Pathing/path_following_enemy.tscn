@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cklarmv5ncifo"]
+
+[ext_resource type="Texture2D" uid="uid://druy6k1dklpo3" path="res://Assets/Player.png" id="1_mttqx"]
+[ext_resource type="Script" path="res://Collection/Enemies/Pathing/path_following_enemy.gd" id="1_q63ti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h68b"]
+size = Vector2(16, 16)
+
+[node name="PathFollowingEnemy" type="PathFollow2D"]
+script = ExtResource("1_q63ti")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_mttqx")
+
+[node name="HitArea" type="Area2D" parent="."]
+
+[node name="Hitbox" type="CollisionShape2D" parent="HitArea"]
+shape = SubResource("RectangleShape2D_8h68b")
